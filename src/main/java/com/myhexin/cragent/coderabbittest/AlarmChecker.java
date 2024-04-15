@@ -22,7 +22,7 @@ public class AlarmChecker {
                     return oldCreatedNanoTime;
                 }
             });
-            return alarmEvent.createdNanoTime.equals(eventNanoTime)
+            return alarmEvent.createdNanoTime.equals(eventNanoTime);
         }
     }
 }
