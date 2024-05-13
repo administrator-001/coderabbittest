@@ -41,7 +41,7 @@ public class MultiGetService {
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
             throw new IllegalStateException("fails to execute multiGet: `interrupt exception`. " + parameterValueList, e);
-        } catch (Exception e) {
+        } catch (ExecutionException e) {
             throw new IllegalStateException("fails to execute multiGet: `" + e.getMessage() + "`" + parameterValueList, e);
         } finally {
             executorService.shutdown();
