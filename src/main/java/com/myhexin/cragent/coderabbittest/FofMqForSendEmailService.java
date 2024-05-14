@@ -94,7 +94,7 @@ public class FofMqForSendEmailService {
                     log.info("=====createPdfDto:资金划扣单开始：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     pdfDto.setPdfType(SystemConstant.ONE);
                     this.createFundsTransfer(pdfDto, appDay, fee);
-                    log.info("=====createPdfDto:资金划扣单完成：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:资金划扣单完成：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     break;
                 default:
                     break;
