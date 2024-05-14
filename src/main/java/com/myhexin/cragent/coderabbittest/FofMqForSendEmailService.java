@@ -87,7 +87,7 @@ public class FofMqForSendEmailService {
                     log.info("=====createPdfDto:交易申请单开始：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     pdfDto.setPdfType(SystemConstant.ONE);
                     this.createTradeApply(pdfDto, appDay, fee);
-                    log.info("=====createPdfDto:交易申请单完成：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:交易申请单完成：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     break;
                 case SystemConstant.TWO:
                     schedulePositionMetricCache.storeAndIncreaseDrawTotal(1, appDay);
