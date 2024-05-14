@@ -84,17 +84,17 @@ public class FofMqForSendEmailService {
                 // 交易申请单
                 case SystemConstant.ONE:
                     schedulePositionMetricCache.storeAndIncreaseApplicationTotal(array.length, appDay);
-                    log.info("=====createPdfDto:交易申请单开始：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:交易申请单开始：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     pdfDto.setPdfType(SystemConstant.ONE);
                     this.createTradeApply(pdfDto, appDay, fee);
-                    log.info("=====createPdfDto:交易申请单完成：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:交易申请单完成：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     break;
                 case SystemConstant.TWO:
                     schedulePositionMetricCache.storeAndIncreaseDrawTotal(1, appDay);
-                    log.info("=====createPdfDto:资金划扣单开始：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:资金划扣单开始：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     pdfDto.setPdfType(SystemConstant.ONE);
                     this.createFundsTransfer(pdfDto, appDay, fee);
-                    log.info("=====createPdfDto:资金划扣单完成：fofId={},appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
+                    log.info("=====createPdfDto:资金划扣单完成：fofId={}, appno={}", pdfDto.getFofId(), JSON.toJSONString(pdfDto.getVcAppsheetserialnos()));
                     break;
                 default:
                     break;
